@@ -34,3 +34,7 @@ php -S localhost:8000
 ```
 
 See `.env.example` for the available variables. Original Spanish install notes: `LEEME.txt`.
+
+## Security
+
+All database queries that use request input go through mysqli prepared statements, and the vote endpoint re-validates required fields, alias and RUT (check digit) on the server.
